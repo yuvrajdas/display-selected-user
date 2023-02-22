@@ -1,0 +1,18 @@
+<div class="users-container">
+  <div class="users-list">
+    <ul>
+      <li *ngFor="let user of users" (click)="selectedUser(user)">{{user?.name}}</li>
+    </ul>
+  </div>
+  <div class="users-data" *ngIf="currUser">
+    <div class="card">
+      <div class="container">
+        <h4><b>{{currUser.name}}</b></h4>
+        <p>{{ currUser.phone }}</p>
+        <p>{{ currUser.email }}</p>
+        <p>{{ currUser.address }}</p>
+        <p>{{ currUser.company }}</p>
+      </div>
+    </div>
+  </div>
+</div>
